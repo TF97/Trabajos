@@ -1,0 +1,12 @@
+.contentPage{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: yellow;
+    gap: 20px;
+    padding: 2rem;
+}
+.pageGoogle{
+    background-color: red;
+    width: 20rem;
+    height: 10rem;
+}
