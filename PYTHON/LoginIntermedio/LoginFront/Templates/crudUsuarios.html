@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleteria Digital - CRUD de Usuarios</title>
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/Static/Css/crudStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!-- Agrega Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <header class="header">
+        <nav>
+            <div class="titulo">
+                <h1>Boleteria Digital - CRUD de Usuarios</h1>
+            </div>
+
+            <div class="boton-inicio">
+                <a href="/index.html" >
+                    <input  type="submit" value=" Volver Inicio " class="boton-home">
+                </a>
+          </div> 
+          
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- Sección de formulario -->
+        <section id="form" class="contenedor">
+            <h2 class="search-title">Gestión de usuarios</h2>
+            <form id="form-user" novalidate>
+                
+                <!-- Campo oculto para almacenar el ID del usuario -->
+                <!-- <input type="hidden" id="id-usuario" name="idUsuario"> --> 
+                <div class="d-flex">
+                    <div class="form-control d-flex-column">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="input-search" name="apellido" id="apellido">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="input-search" name="nombre" id="nombre">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="documento">Documento</label>
+                        <input type="text" class="input-search" name="documento" id="documento">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="telefono">Telefono</label>
+                        <input type="text" class="input-search" name="telefono" id="telefono">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" class="input-search" name="fechaNacimiento" id="fecha-nacimiento">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="email">Email</label>
+                        <input type="email" class="input-search" name="email" id="email">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="pais-origen">País de Origen</label>
+                        <input type="text" class="input-search" name="paisOrigen" id="pais-origen">
+                    </div>
+                    <div class="form-control d-flex-column">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="input-search" name="password" id="password">
+                    </div>
+                </div>
+                <div class="form-column">
+                    <button class="btn-search" type="button" id="btn-search" onclick="searchUsers()">
+                        <img src="/Static/imagenes/search_find_lupa_21889.png" alt="Buscar" class="icon-search">Buscar
+                    </button>
+                    
+                    <input type="hidden" id="id-usuario" name="idUsuario"> 
+                     <button class="btn-event" type="button" id="btn-save-user" onclick="saveUser()">Guardar</button>  
+                    
+                     <!-- <button type="button" onclick="saveUser()">Guardar</button> -->
+
+                    
+                     <!-- <input type="hidden"  name="id_usuario" id="id-usuario">
+                    <button class="btn-event" type="button" id="btn-save-usuario">Agregar</button> -->
+                </div>
+            </form>
+        </section>
+        <!-- Sección de lista de usuarios -->
+        <section id="list" class="contenedor">
+            <h3 class="subtitle">Listado de usuarios</h3>
+            <table id="list-table-users" class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Documento</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                        <th>País de Origen</th>
+                        <th>Contraseña</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-users"></tbody>
+            </table>
+        </section>
+    </main>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Seguinos en:
+                <!-- Iconos de redes sociales -->
+                <img src="/Static/Imagenes/facebook_logo_icon_147291.ico" alt="logo 1">
+                <img src="/Static/Imagenes/instagram_logo_icon_181738.ico" alt="logo 2">
+                <img src="/Static/Imagenes/whatsapp_logo_icon_147205.ico" alt="logo 3">
+            </p>
+            <p>Derechos Registrados</p>
+            <p>Argentina @</p>
+        </div>
+    </footer>
+    <!-- Agrega Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Inicializa Flatpickr en tu campo de fecha -->
+    <script>
+        flatpickr("#fecha-nacimiento", {
+            dateFormat: "Y-m-d",
+        });
+    </script>
+    <!-- Script para mostrar la fecha actualizada -->
+    
+    <!-- Importa el archivo de funciones para CRUD de usuarios -->
+    <script src="/Static/js/crud-usuarios-fetch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="/Static/js/fechaActual.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* Estilos adicionales para el cuerpo */
+body {
+    /* Fuente para todo el cuerpo del documento */
+    font-family: 'Roboto', sans-serif;
+
+    /* Imagen de fondo */
+    background-image: url("/Static/imagenes/cultural.jpg");
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-size: cover; /* La imagen se ajusta para cubrir el fondo */
+    width: 100%; /* Ancho completo */
+
+    /* Color de fondo con transparencia */
+    background-color: rgba(253, 240, 213, 0.8);  
+    background-blend-mode: lighten; /* Modo de mezcla de fondo */
+}
+
+/* Estilos para los títulos */
+h1 {
+    color: #780000; /* Color del texto */
+    margin-left: 200px; /* Margen izquierdo */
+}
+
+/* Estilos generales para etiquetas y campos de entrada */
+label {
+    display: inline-block; /* Hace que las etiquetas se muestren en línea */
+    width: 150px; /* Ancho de la etiqueta */
+    text-align: right; /* Alineación del texto a la derecha */
+    margin-right: 10px; /* Margen derecho */
+    margin-left: 30px; /* Margen izquierdo */
+    color: #003049; /* Color del texto */
+}
+
+/* Estilos para los campos de entrada y botones */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="submit"],
+select {
+    width: 100%; /* Ancho completo */
+    max-width: 300px; /* Ancho máximo */
+    padding: 8px; /* Espacio dentro del elemento */
+    border: 2px solid #003049; /* Borde sólido */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Modelo de caja */
+    margin-top: 8px; /* Margen superior */
+    margin-bottom: 8px; /* Margen inferior */
+    /* Centra los campos de entrada */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* input[type="submit"]:hover { */
+.btn-event:hover{
+    background-color: #457B9D;
+    border: 2px solid #003049;
+    /* Añadimos el borde solo cuando se pasa el mouse sobre el botón */
+
+}
+
+
+
+/* Estilos para el botón de envío */
+/* input[type="submit"] { */
+.btn-event{
+    width: 200px; /* Ancho del botón */
+    padding: 8px; /* Espacio dentro del botón */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Modelo de caja */
+    margin-top: 8px; /* Margen superior */
+    float: center; /* Centra el botón */
+    margin-left: 500px; /* Margen izquierdo */
+    color: #003049; /* Color del texto */
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 10px; /* Margen superior */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos adicionales para el botón de inicio */
+/* .submit-button { */
+.btn-event{
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+
+
+
+
+/* Estilos para dispositivos pequeños (hasta 767px) */
+@media screen and (max-width: 767px) {
+    /* Ajustes para las etiquetas y campos de entrada */
+    label {
+        display: block; /* Muestra las etiquetas en bloque */
+        width: auto; /* Ancho automático */
+        text-align: left; /* Alineación del texto a la izquierda */
+        margin-right: 0; /* Sin margen derecho */
+        margin-bottom: 5px; /* Margen inferior */
+        margin-left: 30px; /* Margen izquierdo */
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="date"],
+    input[type="password"],
+    input[type="submit"],
+    select {
+        width: calc(100% - 20px); /* Ancho del 100% menos 20px */
+        max-width: 300px; /* Ancho máximo */
+        padding: 8px; /* Espacio dentro del elemento */
+        border: 2px solid #003049; /* Borde sólido */
+        border-radius: 4px; /* Borde redondeado */
+        box-sizing: border-box; /* Modelo de caja */
+        margin-top: 8px; /* Margen superior */
+        margin-bottom: 8px; /* Margen inferior */
+        /* Centra los campos de entrada */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input[type="submit"] {
+        margin-top: 20px; /* Margen superior */
+        width: calc(100% - 20px); /* Ancho del 100% menos 20px */
+    }
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+}
+
+
+/* Estilos para dispositivos medianos (768px a 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+
+}
+
+
+
+/* Estilos para dispositivos grandes (1024px en adelante) */
+@media screen and (min-width: 1024px) {
+
+    body {
+        
+        /* Imagen de fondo para el cuerpo */
+        background-position: center;
+        min-height: 100vh;
+    }
+}
